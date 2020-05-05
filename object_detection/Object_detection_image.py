@@ -19,8 +19,9 @@ import tensorflow as tf
 import sys
 from math import sqrt
 import statistics
-
-
+import warnings
+if not sys.warnoptions:
+	warnings.simplefilter("ignore")
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
 
@@ -136,7 +137,7 @@ KNOWN_DISTANCE = 3
 
 KNOWN_WIDTH = 0.28
 
-#IMAGE_PATHS = [IMAGE_NAME]
+IMAGE_PATHS = [IMAGE_NAME]
 image = cv2.imread(IMAGE_PATHS[0])
 marker = xmax-xmin
 focalLength = (marker * KNOWN_DISTANCE) / KNOWN_WIDTH

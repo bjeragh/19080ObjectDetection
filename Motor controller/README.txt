@@ -1,0 +1,1 @@
+The motor controller program is based off of the Phoenix socket CAN example, and as such uses the libraries in that project. The include and lib folder are all that is necessary, but the cloned repository is also here as a reference. 
